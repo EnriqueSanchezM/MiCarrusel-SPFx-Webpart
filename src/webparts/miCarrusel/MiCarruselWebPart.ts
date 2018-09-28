@@ -127,6 +127,7 @@ export default class MiCarruselWebPart extends BaseClientSideWebPart<IMiCarrusel
       i++;     
       
       //Si la noticia no tiene imagen, cogemos la imagen por defecto
+      //Si la imagen no empieza por http, le agregamos la url del sitio
       var imageURL1 = RenderCarruselParams.defaultImgUrl;
       if (item.CarouselImage != null && item.CarouselImage.Url != "")
       {        
