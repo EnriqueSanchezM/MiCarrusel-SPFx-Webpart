@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.6.0",
+    "libraryName": "micarrusel-webpart",
+    "libraryId": "85bae66c-bbe8-40b3-bcd7-f0e5ddc32b6a",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}

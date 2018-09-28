@@ -1,0 +1,33 @@
+<List xmlns:ows="Microsoft SharePoint" Title="Carousel Library Schema" EnableContentTypes="TRUE" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="CarouselDocLibSchema" BaseType="1" xmlns="http://schemas.microsoft.com/sharepoint/">
+ <MetaData>
+   <ContentTypes>
+     <ContentTypeRef ID="0x01010800FD6D4A4A5FB84B178C4E8395539C70C6" />
+   </ContentTypes>
+   <Fields></Fields>
+   <Views>
+     <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+       <XslLink Default="TRUE">main.xsl</XslLink>
+       <JSLink>clienttemplates.js</JSLink>
+       <RowLimit Paged="TRUE">30</RowLimit>
+       <Toolbar Type="Standard" />
+       <ViewFields>
+         <FieldRef Name="LinkFilename"></FieldRef>
+         <FieldRef Name="CarouselTitle"></FieldRef>
+         <FieldRef Name="CarouselComments"></FieldRef>
+         <FieldRef Name="CarouselOrder"></FieldRef>    
+         <FieldRef Name="CarouselShow"></FieldRef>      
+       </ViewFields>
+       <Query>
+         <OrderBy>
+           <FieldRef Name="CarouselOrder" />
+         </OrderBy>
+       </Query>
+     </View>
+   </Views>
+   <Forms>
+     <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+     <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+     <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+   </Forms>
+ </MetaData>
+</List>

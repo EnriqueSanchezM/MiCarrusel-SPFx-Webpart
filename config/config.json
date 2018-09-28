@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "mi-carrusel-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/miCarrusel/MiCarruselWebPart.js",
+          "manifest": "./src/webparts/miCarrusel/MiCarruselWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "jquery":"node_modules/jquery/dist/jquery.min.js",
+    "jqueryui":"node_modules/jqueryui/jquery-ui.min.js"
+  },
+  "localizedResources": {
+    "MiCarruselWebPartStrings": "lib/webparts/miCarrusel/loc/{locale}.js"
+  }
+}

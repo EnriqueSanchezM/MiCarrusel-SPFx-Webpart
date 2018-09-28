@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+        <Field ID="{2f9975d0-87ad-4237-b387-79c1d699b110}"
+                Name="CarouselTitle"
+                DisplayName="Título del Elemento de Carrusel"
+                Type="Text"           
+                Required="TRUE"          
+                Group="Carousel Columns" />
+
+        <Field ID="{757e87a7-ad90-472a-8f3a-be2208b33f7e}"
+                Name="CarouselComments"
+                DisplayName="Comentarios del Elemento de Carrusel"
+                Type="Note" 
+                NumLines="6"        
+                Required="FALSE"
+                Group="Carousel Columns" />
+
+        <Field ID="{3241de0c-7bb5-4747-90ff-3bbba398de97}"
+                Name="CarouselOrder"
+                DisplayName="Orden del Elemento de Carrusel"
+                Type="Number" 
+                Decimals="0"        
+                Required="TRUE"
+                Group="Carousel Columns" />
+
+        <Field ID="{f12ad737-54ee-49d5-93d7-57e019bad565}"
+                Name="CarouselShow"
+                DisplayName="Mostrar Elemento en el Carrusel"
+                Type="Boolean"                 
+                Group="Carousel Columns" />
+
+        <Field ID="{2f781cf7-541e-439a-a5ea-a90f464282b3}"
+                Name="CarouselImage"
+                DisplayName="Imagen del Elemento de Carrusel"
+                Type="URL" 
+                Format="Image"       
+                Required="FALSE"
+                Group="Carousel Columns" />
+
+                        
+        <ContentType ID="0x01010800FD6D4A4A5FB84B178C4E8395539C70C6" 
+                Name="Página del Elemento de Carrusel"  
+                Group="Carousel Content Types"           
+                Description="Tipo de Contenido para las páginas del Carrusel" 
+                Inherits="TRUE" 
+                Overwrite="TRUE" 
+                Version="0" >
+                <FieldRefs>
+                        <FieldRef ID="{2f9975d0-87ad-4237-b387-79c1d699b110}" /> 
+                        <FieldRef ID="{757e87a7-ad90-472a-8f3a-be2208b33f7e}" />
+                        <FieldRef ID="{3241de0c-7bb5-4747-90ff-3bbba398de97}" />
+                        <FieldRef ID="{f12ad737-54ee-49d5-93d7-57e019bad565}" />
+                        <FieldRef ID="{2f781cf7-541e-439a-a5ea-a90f464282b3}" />
+                </FieldRefs>
+        </ContentType> 
+
+        <ListInstance 
+                CustomSchema="schema.xml"
+                FeatureId="00BFEA71-C796-4402-9F2F-0EB9A6E71B18"
+                Title="Páginas del Carrusel" 
+                Description="Biblioteca para almacenar las páginas del carrusel"
+                TemplateType="119"
+                Url="CarouselPages">
+        </ListInstance>
+
+        <!-- Upload No_image_photo.png to the SiteAssets -->
+        <Module Name="Files" Url="SiteAssets">
+                <!-- ISSUE: For some reason `gulp package-solution` breaks the .jpg, .png images. 
+                        Workaround is to open the .sppkg with winrar and add the images manually. -->
+                <File Path="No_image_photo.png" Url="CarouselImgs/No_image_photo.png" Type="GhostableInLibrary" ReplaceContent="TRUE" >
+                </File>
+        </Module>
+</Elements>

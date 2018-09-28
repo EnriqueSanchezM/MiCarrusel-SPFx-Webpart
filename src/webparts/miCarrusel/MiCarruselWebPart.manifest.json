@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "d5b84b6a-685b-437a-a4cb-c15837dcb7d5",
+  "alias": "MiCarruselWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportsFullBleed": true,
+  
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "group": { "default": "Other" },
+    "title": { "default": "MiCarrusel" },
+    "description": { "default": "WebPart del Carrusel" },
+    "officeFabricIconFontName": "SharepointLogo",
+    "properties": {
+      "description": "Carrusel de Noticias. Se muestran las páginas Wiki de una biblioteca de páginas",
+      "paramListIntName": "CarouselPages",
+      "paramFilter":  "CarouselShow eq 1",
+      "paramSelect":  "Id,EncodedAbsUrl,LinkFilename,CarouselTitle,CarouselComments,CarouselOrder,CarouselImage",
+      "paramOrder":  "CarouselOrder asc",
+      "paramTop": "3",
+      "defaultImgUrl": "SiteAssets/CarouselImgs/No_image_photo.png"   
+    }
+  }]
+}

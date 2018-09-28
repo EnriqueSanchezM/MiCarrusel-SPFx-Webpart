@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "micarrusel-webpart-client-side-solution",
+    "id": "85bae66c-bbe8-40b3-bcd7-f0e5ddc32b6a",
+    "version": "5.0.0.0",
+    "includeClientSideAssets": true, 
+    "iconPath": "Prodware_96p.png", 
+    "features": [{
+      "title": "Carousel Feature",
+      "description": "Caracterísitca para desplegar el WebPart del Carrusel",
+      "id": "59805B86-1F4E-431D-BEF4-6A749FF5EFC2", 
+      "version": "1.0.0.0",      
+      "assets": {
+        "elementManifests": [
+          "elements.xml"
+        ],
+        "elementFiles":[
+          "schema.xml",
+          "No_image_photo.png"
+        ]
+      }
+    }]
+    },
+  "paths": {
+    "zippedPackage": "solution/micarrusel-webpart.sppkg"
+  }
+}
+
